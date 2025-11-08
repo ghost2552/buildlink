@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@otplib/preset-default": "^12.0.1",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
@@ -12,6 +13,7 @@
     "qrcode": "^1.5.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.5",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -20,7 +22,7 @@
     "build": "react-scripts build",
     "tailwind:build": "tailwindcss -i ./src/tailwind.css -o ./src/tailwind-output.css --minify",
     "tailwind:watch": "tailwindcss -i ./src/tailwind.css -o ./src/tailwind-output.css --watch",
-    "firebase:seed": "tsx scripts/initFirestore.js",
+    "firebase:seed": "node src/initFirestore.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -43,9 +45,13 @@
     ]
   },
   "devDependencies": {
+    "assert": "^2.1.0",
     "autoprefixer": "^10.4.21",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
     "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.13",
-    "tsx": "^4.20.6"
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "tailwindcss": "^3.4.13"
   }
 }
